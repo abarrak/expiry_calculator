@@ -1,6 +1,6 @@
 # Expiry Calculator
 
-A ruby library that Determines how much time left till certain date and time.
+A ruby library that determines how much time left till certain date and time.
 
 ## Installation
 
