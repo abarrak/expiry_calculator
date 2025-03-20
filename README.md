@@ -1,5 +1,10 @@
 # Expiry Calculator
 
+[![Gem Version](https://badge.fury.io/rb/expiry_calculator.svg)](https://rubygems.org/gems/expiry_calculator)
+[![Build](https://github.com/abarrak/expiry_calculator/actions/workflows/ci.yml/badge.svg)](https://github.com/abarrak/expiry_calculator/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 A ruby library that determines how much time left till certain date and time.
 
 ## Installation
@@ -24,12 +29,18 @@ Add the library if gem auto loading is not available.
 require "expiry_calculator"
 ```
 
-Mix in or use directly the calcuate function:
+Mix in to use the calcuate function directly:
 
 ```ruby
 include ExpiryCalculator
 
 calculate Date.new(2025, 10, 10)
+```
+
+Or use the the extendable module method:
+
+```ruby
+ExpiryCalculator.calculate("2025-12-25")
 ```
 
 The supported objects:
@@ -40,12 +51,10 @@ The supported objects:
 - `ActiveRecord`: given an attribute of of the model to read as date object.
 
 
-## Development
+## API Docs
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+The gem specs can [be found at RubyDocs.](https://www.rubydoc.info/gems/network-client/)
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/abarrak/expiry_calculator.
+Bug reports and pull requests are welcome [on GitHub](https://github.com/abarrak/expiry_calculator).

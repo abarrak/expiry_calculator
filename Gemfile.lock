@@ -109,6 +109,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   codeclimate-test-reporter (~> 1.0)
   expiry_calculator!
   factory_bot (~> 6.2)
