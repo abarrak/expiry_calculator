@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'date'
+
+require "date"
 require_relative "lib/expiry_calculator/version"
 
 Gem::Specification.new do |spec|
@@ -9,11 +10,12 @@ Gem::Specification.new do |spec|
   spec.authors = ["Abdullah Barrak"]
   spec.email   = ["abdullah@abarrak.com"]
 
-  spec.summary = "Determines how much time left till certain date."
+  spec.summary     = "Determines how much time left till certain date."
   spec.description = "The library provides functionality to calculate the expiration from different dates and time objects."
   spec.required_ruby_version = ">= 3.1.0"
-  spec.homepage      = "https://rubygems.org/gems/expiry_calculator"
-  spec.license       = "MIT"
+
+  spec.homepage = "https://rubygems.org/gems/expiry_calculator"
+  spec.license  = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/abarrak/expiry_calculator"

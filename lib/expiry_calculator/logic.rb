@@ -15,13 +15,14 @@ module ExpiryCalculator
     #
     def calculate record, record_attr = nil
       expiry_date = case record
-        when Date
-          record
-        when DateTime
-          record
-        when ApplicationRecord
-          record[record_attr.to_sym]
-        else
+      when Date
+        record
+      when DateTime
+        record
+      when ApplicationRecord
+        record[record_attr.to_sym]
+      else
+        raise ArgumentError, "record type not supported"
       end
       days = (Date.today..expiry_date).count
       days.zero? ? 0 : days - 1

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe ExpiryCalculator do
-
   subject { (Class.new { include ExpiryCalculator }).new }
 
   let(:test_data) {
