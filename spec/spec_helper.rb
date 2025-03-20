@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require "expiry_calculator"
-require 'active_support'
+require "active_support"
+require "active_support/core_ext/date/calculations"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
