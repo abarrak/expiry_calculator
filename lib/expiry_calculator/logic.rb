@@ -19,10 +19,10 @@ module ExpiryCalculator
         record
       when DateTime
         record
-      when ApplicationRecord
+      when ->(r) { defined?(ApplicationRecord) && r === ApplicationRecord }
         record[record_attr.to_sym]
       else
-        raise ArgumentError, "record type not supported"
+        raise ArgumentError, "record type not supported."
       end
       days = (Date.today..expiry_date).count
       days.zero? ? 0 : days - 1

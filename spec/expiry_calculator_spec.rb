@@ -26,4 +26,24 @@ RSpec.describe ExpiryCalculator do
   it "handles expired dates correctly" do
     expect(subject.calculate(Date.yesterday)).to eq(0)
   end
+
+  context "Arguments" do
+    it "supports date parameter" do
+    end
+
+    it "supports datetime parameter" do
+    end
+
+    it "supports string parameters and do the conversion" do
+    end
+
+    it "supports active_record parameter with accessor attr" do
+    end
+
+    it "gives error with non supported type" do
+      expect {
+        subject.calculate(2020)
+      }.to raise_error(ArgumentError, "record type not supported.")
+    end
+  end
 end
