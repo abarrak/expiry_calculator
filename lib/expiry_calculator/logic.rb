@@ -19,6 +19,8 @@ module ExpiryCalculator
         record
       when DateTime
         record
+      when String
+        DateTime.parse(record)
       when ->(r) { defined?(ApplicationRecord) && r === ApplicationRecord }
         record[record_attr.to_sym]
       else
