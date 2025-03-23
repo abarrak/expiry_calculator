@@ -29,19 +29,35 @@ Add the library if gem auto loading is not available.
 require "expiry_calculator"
 ```
 
-Mix in to use the calcuate function directly:
+You can use the the extendable module method:
+
+```ruby
+ExpiryCalculator.calculate(2025, 10, 10)
+# => 201
+```
+
+Or mix in to use the calcuate function directly:
 
 ```ruby
 include ExpiryCalculator
 
 calculate Date.new(2025, 10, 10)
+# => 201
 ```
-
-Or use the the extendable module method:
 
 ```ruby
-ExpiryCalculator.calculate("2025-12-25")
+calculate "2025-01-10"
+# => 0
 ```
+
+Active record models and be called with the date field needed to calculate:
+
+```ruby
+user = User.first
+calculate user, :birth_day
+# => 15
+```
+
 
 The supported objects:
 
@@ -49,7 +65,6 @@ The supported objects:
 - `DateTime`
 - `string`: attempted to be parsed as datetime object.
 - `ActiveRecord`: given an attribute of of the model to read as date object.
-
 
 ## API Docs
 
