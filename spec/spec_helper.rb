@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+require "simplecov"
+require_relative "support/coverage"
+
+SimpleCovHelper.configure_formatter
+SimpleCov.start
+
 require "expiry_calculator"
 require "active_support"
 require "active_support/core_ext/date/calculations"
