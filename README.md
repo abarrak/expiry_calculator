@@ -68,7 +68,7 @@ The supported objects:
 
 ## API Docs
 
-The gem specs can [be found at RubyDocs.](https://www.rubydoc.info/gems/network-client/)
+The gem specs can [be found at RubyDocs.](https://www.rubydoc.info/gems/expiry_calculator)
 
 ## Contributing
 
