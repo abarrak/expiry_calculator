@@ -1,4 +1,7 @@
 module ExpiryCalculator
   VERSION: String
-  # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+
+  module Logic
+    def calculate: (Date | DateTime | String | ActiveRecord::Base record, String record_attr) -> Integer
+  end
 end

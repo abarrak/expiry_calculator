@@ -6,7 +6,13 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (8.0.2)
+    activemodel (7.2.2.1)
+      activesupport (= 7.2.2.1)
+    activerecord (7.2.2.1)
+      activemodel (= 7.2.2.1)
+      activesupport (= 7.2.2.1)
+      timeout (>= 0.4.0)
+    activesupport (7.2.2.1)
       base64
       benchmark (>= 0.3)
       bigdecimal
@@ -18,7 +24,6 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
-      uri (>= 0.13.1)
     ast (2.4.2)
     base64 (0.2.0)
     benchmark (0.4.0)
@@ -46,6 +51,8 @@ GEM
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.2.1)
+    rbs (3.9.1)
+      logger
     regexp_parser (2.10.0)
     rexml (3.4.1)
     rspec (3.13.0)
@@ -101,23 +108,25 @@ GEM
     standard-performance (1.7.0)
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.24.0)
+    timeout (0.4.3)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
-    uri (1.0.3)
 
 PLATFORMS
   arm64-darwin-24
   ruby
 
 DEPENDENCIES
-  activesupport
+  activerecord (~> 7)
+  activesupport (~> 7)
   codeclimate-test-reporter (~> 1.0)
   expiry_calculator!
   factory_bot (~> 6.2)
   rake (~> 13.0)
+  rbs
   rspec (~> 3.6)
   simplecov (= 0.22.0)
   simplecov-cobertura (~> 2.1.0)

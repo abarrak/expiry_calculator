@@ -9,3 +9,8 @@
 
 # rspec failure tracking
 .rspec_status
+
+# rbs
+.gem_rbs_collection
+rbs_collection.yaml
+rbs_collection.lock.yaml
