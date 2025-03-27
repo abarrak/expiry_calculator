@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/expiry_calculator.svg)](https://rubygems.org/gems/expiry_calculator)
 [![Build](https://github.com/abarrak/expiry_calculator/actions/workflows/ci.yml/badge.svg)](https://github.com/abarrak/expiry_calculator/actions/workflows/ci.yml)
+[![Maintainability](https://qlty.sh/badges/26185eb3-29df-401a-b266-ce7123b55fc3/maintainability.svg)](https://qlty.sh/gh/abarrak/projects/expiry_calculator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -68,7 +69,7 @@ The supported objects:
 
 ## API Docs
 
-The gem specs can [be found at RubyDocs.](https://www.rubydoc.info/gems/network-client/)
+The gem specs can [be found at RubyDocs.](https://www.rubydoc.info/gems/expiry_calculator)
 
 ## Contributing
 

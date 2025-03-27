@@ -25,10 +25,7 @@ jobs:
           bundler-cache: true
       - name: Prepare overage tools
         shell: bash
-        run: |
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
+        run: curl https://qlty.sh | sh
       - name: Run the default task
         run: |
           bundle exec rake
