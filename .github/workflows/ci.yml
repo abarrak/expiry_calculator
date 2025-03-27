@@ -29,4 +29,4 @@ jobs:
       - name: Run the default task
         run: |
           bundle exec rake
-          qlty coverage publish --token {{ secrets.QLTY_TOKEN }} --report-format cobertura ./coverage/coverage.xml
+          ~/.qlty/bin/qlty coverage publish --token {{ secrets.QLTY_TOKEN }} --report-format cobertura ./coverage/coverage.xml
