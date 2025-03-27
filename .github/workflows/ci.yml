@@ -31,7 +31,5 @@ jobs:
           ./cc-test-reporter before-build
       - name: Run the default task
         run: |
-          # export CC_TEST_REPORTER_ID="${{ secrets.CC_TEST_REPORTER_ID }}"
           bundle exec rake
-          # ./cc-test-reporter format-coverage --input-type cobertura ./coverage/coverage.xml
-          # if [[ "$?" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
+          qlty coverage publish --token {{ secrets.QLTY_TOKEN }} --report-format cobertura ./coverage/coverage.xml
