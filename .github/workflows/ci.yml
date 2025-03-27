@@ -25,8 +25,10 @@ jobs:
           bundler-cache: true
       - name: Prepare overage tools
         shell: bash
-        run: curl https://qlty.sh | sh
+        run: |
+          curl https://qlty.sh | sh
+          ln -s ~/.qlty/bin/qlty ./qlty
       - name: Run the default task
         run: |
           bundle exec rake
-          ~/.qlty/bin/qlty coverage publish --token {{ secrets.QLTY_TOKEN }} --report-format cobertura ./coverage/coverage.xml
+          ./qlty coverage publish --token ${{ secrets.QLTY_TOKEN }} --report-format cobertura ./coverage/coverage.xml
