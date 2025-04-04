@@ -14,6 +14,7 @@ RSpec.describe ExpiryCalculator do
 
   it "has a version number" do
     expect(ExpiryCalculator::VERSION).not_to be nil
+    expect(ExpiryCalculator::VERSION).to be_kind_of String
   end
 
   it "calculate difference in days for current and future expiry date" do
@@ -28,13 +29,20 @@ RSpec.describe ExpiryCalculator do
   end
 
   context "Arguments" do
+    let (:string_param) { (Date.today. + 5).to_s }
+    let (:date_param) { Date.today + 1 }
+    let (:datetime_param) { DateTime.new(2020, 10, 10) }
+
     it "supports date parameter" do
+      expect(subject.calculate(date_param)).to eq(1)
     end
 
     it "supports datetime parameter" do
+      expect(subject.calculate(datetime_param)).to eq(0)
     end
 
     it "supports string parameters and do the conversion" do
+      expect(subject.calculate(string_param)).to eq(5)
     end
 
     it "supports active_record parameter with accessor attr" do
