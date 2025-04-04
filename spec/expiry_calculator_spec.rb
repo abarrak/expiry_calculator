@@ -32,6 +32,15 @@ RSpec.describe ExpiryCalculator do
     let (:string_param) { (Date.today. + 5).to_s }
     let (:date_param) { Date.today + 1 }
     let (:datetime_param) { DateTime.new(2020, 10, 10) }
+    let (:active_record_class) do
+      Class.new(ActiveRecord::Base) { self.table_name = "post_table" }
+    end
+    let (:active_record_param) { active_record_class.new(post_date: Date.today + 10) }
+
+    establish_coonection
+
+    before { up }
+    after { down }
 
     it "supports date parameter" do
       expect(subject.calculate(date_param)).to eq(1)
@@ -46,6 +55,7 @@ RSpec.describe ExpiryCalculator do
     end
 
     it "supports active_record parameter with accessor attr" do
+      expect(subject.calculate(active_record_param, :post_date)).to eq(10)
     end
 
     it "gives error with non supported type" do

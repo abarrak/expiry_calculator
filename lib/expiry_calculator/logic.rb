@@ -21,9 +21,11 @@ module ExpiryCalculator
         record
       when String
         DateTime.parse(record)
-      when ->(r) { defined?(ApplicationRecord) && r === ApplicationRecord }
+      # https://github.com/rails/rails/blob/04cda1848cb847c2bdad0bfc12160dc8d5547775/activerecord/lib/active_record/core.rb#L135
+      when ->(r) { defined?(ActiveRecord::Base) && r.is_a?(ActiveRecord::Base) }
         record[record_attr.to_sym]
       else
+        p record.class
         raise ArgumentError, "record type not supported."
       end
       days = (Date.today..expiry_date).count
