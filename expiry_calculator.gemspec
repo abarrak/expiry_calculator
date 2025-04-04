@@ -42,6 +42,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "standard", "~> 1.3"
   spec.add_development_dependency "activesupport", "~> 7"
   spec.add_development_dependency "activerecord", "~> 7"
-  spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "sqlite3", "~> 2"
   spec.add_development_dependency "rbs"
 end
