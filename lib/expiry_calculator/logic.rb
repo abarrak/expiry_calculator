@@ -15,9 +15,9 @@ module ExpiryCalculator
     #
     def calculate record, record_attr = nil
       expiry_date = case record
-      when Date
-        record
       when DateTime
+        record
+      when Date
         record
       when String
         DateTime.parse(record)

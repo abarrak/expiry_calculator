@@ -29,13 +29,13 @@ RSpec.describe ExpiryCalculator do
   end
 
   context "Arguments" do
-    let (:string_param) { (Date.today. + 5).to_s }
-    let (:date_param) { Date.today + 1 }
-    let (:datetime_param) { DateTime.new(2020, 10, 10) }
-    let (:active_record_class) do
+    let(:string_param) { (Date.today + 5).to_s }
+    let(:date_param) { Date.today + 1 }
+    let(:datetime_param) { DateTime.new(2020, 10, 10) }
+    let(:active_record_class) do
       Class.new(ActiveRecord::Base) { self.table_name = "post_table" }
     end
-    let (:active_record_param) { active_record_class.new(post_date: Date.today + 10) }
+    let(:active_record_param) { active_record_class.new(post_date: Date.today + 10) }
 
     establish_coonection
 
