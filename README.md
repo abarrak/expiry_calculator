@@ -7,7 +7,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-A ruby library that determines how much time left till certain date and time.
+A ruby library that determines how much time left till certain date and time.<br>
+> Extracted from [license manager app](https://github.com/abarrak/license-manager/).
 
 ## Installation
 
